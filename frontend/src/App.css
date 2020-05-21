@@ -1,0 +1,349 @@
+
+
+
+    /* <---------- Start Home-Tags Style ---------------------> */
+    /* <---------- Start Home-Tags Style ---------------------> */
+    /* <---------- Start Home-Tags Style ---------------------> */
+    /* <---------- Start Home-Tags Style --------------------->  */
+
+
+.home-p-tag{
+      color:white;
+      font-size: 14px;
+
+}
+
+
+
+
+.home-h1-tag{
+      color:white;
+
+}
+.home-h2-tag{
+      color:white;
+
+}
+.home-h3-tag{
+      color:white;
+
+}
+.home-h4-tag{
+      color:white;
+ 
+}
+
+
+
+
+    /* <---------- Start NavBar Style ---------------------> */
+    /* <---------- Start NavBar Style ---------------------> */
+    /* <---------- Start NavBar Style ---------------------> */
+    /* <---------- Start NavBar Style --------------------->  */
+
+.nav{
+      z-index: 10;
+      position: fixed;
+      width: 100%;
+  
+}
+#nav-bar{
+      background-color: rgb(116, 17, 17);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* <---------- Start Home-Video Style ---------------------> */
+    /* <---------- Start Home-Video Style ---------------------> */
+    /* <---------- Start Home-Video Style ---------------------> */
+    /* <---------- Start Home-Video Style --------------------->  */
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+    
+    /* Add some content at the bottom of the video/page */
+    .content {
+      position: fixed;
+      bottom: 0;
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+    }
+    
+    /* Style the button used to pause/play the video */
+    #myBtn {
+      width: 200px;
+      font-size: 18px;
+      padding: 10px;
+      border: none;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    #myBtn:hover {
+      background: #ddd;
+      color: black;
+    }
+
+/* 
+    <---------- start paralax styles --------------------->
+    <---------- start paralax styles --------------------->
+    <---------- start paralax styles --------------------->
+    <---------- start paralax styles ---------------------> */
+
+
+
+
+
+    .parallax {
+      height: 500px; /* fallback for older browsers */
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      -webkit-perspective: 300px;
+      perspective: 300px;
+    }
+  
+    .parallax__group {
+      position: relative;
+      height: 500px; /* fallback for older browsers */
+      height: 100vh;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+    }
+  
+    .parallax__layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  
+    .parallax__layer--fore {
+
+      -webkit-transform: translateZ(90px) scale(.7);
+      transform: translateZ(90px) scale(.7);
+      z-index: 1;
+    }
+  
+    .parallax__layer--base {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      z-index: 4;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+  
+    .parallax__layer--back {
+      -webkit-transform: translateZ(-300px) scale(2);
+      transform: translateZ(-300px) scale(2);
+      z-index: 3;
+    }
+  
+    .parallax__layer--deep {
+      -webkit-transform: translateZ(-600px) scale(3);
+      transform: translateZ(-600px) scale(3);
+      z-index: 2;
+    }
+  
+  
+    /* Debugger styles - used to show the effect
+    --------------------------------------------- */
+  
+    .debug {
+      position: fixed;
+      top: 0;
+      left: .5em;
+      z-index: 999;
+      background: rgba(0,0,0,.85);
+      color: #fff;
+      padding: .5em;
+      border-radius: 0 0 5px 5px;
+    }
+    .debug-on .parallax__group {
+      -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
+      transform: translate3d(700px, 0, -800px) rotateY(30deg);
+   }
+    .debug-on .parallax__layer {
+      box-shadow: 0 0 0 2px #000;
+      opacity: 0.9;
+    }
+    .parallax__group {
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: transform 0.5s;
+    }
+  
+  
+    /* demo styles
+    --------------------------------------------- */
+  
+    body, html {
+      overflow: hidden;
+    }
+  
+    body {
+      font: 100% / 1.5 Arial;
+    }
+  
+    * {
+      margin:0;
+      padding:0;
+    }
+  
+    .parallax {
+      font-size: 200%;
+    }
+    .make-row{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+      justify-content:space-around;
+      width: 100%;
+    }
+  
+  .make-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    justify-content:space-around;
+    width: 100%;
+  }
+     /* centre the content in the parallax layers */
+    
+    @media screen and (min-width: 701px) {
+      .title {
+            text-align: center;
+            position: absolute;
+            text-align: center;
+            display: flex;
+            place-items: center;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+         width: 100%;
+            
+          }
+          .moble-off{
+          }
+          
+    }
+
+      
+    
+    /* On screens that are 415px or less */
+    @media screen and (max-width: 700px) {
+      .title {
+            text-align: center;
+            display: flex;
+            place-items: center;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            width: 100%;
+
+      }
+      .moble-off{
+        display: none;
+      }
+    } 
+  
+  
+  
+    /* style the groups
+    --------------------------------------------- */
+  
+    #group1 {
+      z-index: 5; /* slide over group 2 */
+    }
+    #group1 .parallax__layer--base {
+          background-color: rgb(224, 224, 224);
+      background-image: url(/images/test-church-2.jpg); 
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat ;}
+  
+    #group2 {
+      z-index: 3; /* slide under groups 1 and 3 */
+    }
+    #group2 .parallax__layer--back {
+      background-image: url(/images/test-church-1.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat ;     }
+  
+    #group3 {
+      z-index: 4; /* slide over group 2 and 4 */
+    }
+    #group3 .parallax__layer--base {
+      background-color: rgb(224, 224, 224);
+      background-image: url(/images/test-bible.jpeg); 
+      background-size: cover;     }
+  
+    #group4 {
+      z-index: 2; /* slide under group 3 and 5 */
+    }
+    #group4 .parallax__layer--deep {
+      background-image: url(/images/test-church-2.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat ;     }
+  
+    #group5 {
+      z-index: 3; /* slide over group 4 and 6 */
+    }
+    #group5 .parallax__layer--base {
+      background-color: rgb(224, 224, 224);
+      background-image: url(/images/Shinny_stars_weather_night_Galaxy_clean_light-512.png); 
+      background-size: 90px;     }
+  
+    #group6 {
+      z-index: 2; /* slide under group 5 and 7 */
+    }
+    #group6 .parallax__layer--back {
+      background-image: url(/images/test-church-3.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat ;     }
+  
+    #group7 {
+      z-index: 3; /* slide over group 7 */
+    }
+    #group7 .parallax__layer--base {
+      background-color: rgb(224, 224, 224);
+      /* background-image: url(/images/Shinny_stars_weather_night_Galaxy_clean_light-512.png); 
+      background-size: 90px;     */
+     }
+  
+  
+    /* misc
+    --------------------------------------------- */
+    .demo__info {
+      position: absolute;
+      z-index:100;
+      bottom: 1vh;
+      top: auto;
+      font-size:80%;
+      text-align:center;
+      width: 100%;
+    }
