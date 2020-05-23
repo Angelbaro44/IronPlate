@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {Link} from 'react-router-dom';
 
 const apiKey = 'AIzaSyDZNDn44BCa7TZCnCwrHJoOwNeqBbSQqD8';
 const channelID = 'UCIvK3zry6RI7308u5IGbNSg';
@@ -65,14 +65,17 @@ class YoutubeCycles extends Component {
 
             console.log(this);
             return (
-                  <div className='youtubeDivDaddy'>
+                  <div style={{width:'100%', height:'100%'}}>
                   <br/><br/>
-                 <div><a id='redditHeaderUsername'>"{this.state.videoTitle}" by {this.state.videoChannelTitle} </a></div>
-                 <br/><br/>
-                 <div className='youtubeDivSon'>
+                 <div><a className='home-h2-tag' id='redditHeaderUsername'>"{this.state.videoTitle}" by {this.state.videoChannelTitle} </a></div>
+                 <br/>
+                 <div style={{height:'80%'}}>
                  {/* <button className='youtubeButtonsLeft' onClick={this.negClicked}> <p className='verticalText'>Newer Video</p>  </button> */}
-                              <div className='youtubeDivVideo'><iframe  className='youtubeVideo' width="560" height="315" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              <div className='moble-video'><iframe  className='youtubeVideo' width="90%" height="90%" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                               {/* <button className='youtubeButtonsRight' onClick={this.posClicked}>  <p className='verticalText'>Older   Video</p>    </button> */}
+                              <br/>
+                              <Link className='home-links-btn'><botton>More Videos...</botton></Link>
+
                  </div>
                  <br/><br/><br/>
            </div>

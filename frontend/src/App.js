@@ -84,7 +84,7 @@ class App extends Component {
 
                   <MDBContainer>
           <MDBNavbar
-            color='light-blue lighten-4'
+            id='nav-bar'
             style={{ marginTop: '20px' }}
             light
           >
@@ -109,13 +109,7 @@ class App extends Component {
                     <MDBNavLink to='#!'>MINISTRIES</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                  <div class="btn-group dropright">
-                      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        RESORCSES
-                      </button>
-                      <div class="dropdown-menu">
-                      </div>
-                    </div>
+                  <MDBNavLink to='#!'>Resorcses</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
                     <MDBNavLink to='#!'>SAINTS & SINNERS</MDBNavLink>
