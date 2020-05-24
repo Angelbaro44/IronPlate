@@ -153,7 +153,58 @@ class App extends Component {
 
 
 
+      <footer><div class="footer">
+            <div class="inner-footer">
 
+              <div class="footer-items">
+                <h1>Angel Baro </h1>
+                <p>If your reading this it's too late. She took the kids, i lost the car, and im late on my morgage. I can't keep living like this... tomorrow at 3PM i will hang out at the mall to try and lift my spirits. Wish me luck, Good Bye. </p>
+              </div>
+
+              <div class="footer-items">
+                <h3>Quick Links</h3>
+                <div class="border1"></div>
+                <ul>
+                <NavLink to='/'><li>Home</li></NavLink>
+                <NavLink to='/motorcycles'><li>Motorcyles</li></NavLink>
+                <NavLink to='/cigars'><li>Cigars</li></NavLink>
+                <NavLink to='/trips'><li>Trips</li></NavLink>
+                </ul>
+              </div>
+
+              <div class="footer-items">
+                <h3>Skills</h3>
+                <div class="border1"></div>
+                <ul>
+                  <a href="#"><li>HTML</li></a>
+                  <a href="#"><li>CSS</li></a>
+                  <a href="#"><li>JavaScript</li></a>
+                  <a href="#"><li>BootStrap</li></a>
+                </ul>
+              </div>
+
+              <div class="footer-items">
+                <h3>Contact Me</h3>
+                <div class="border1"></div>
+                <ul>
+                  <li><i class="fa fa-map-marker" aria-hidden="true"></i>Miami, Florida</li>
+                  <li><i class="fa fa-phone" aria-hidden="true"></i>786-445-6192</li>
+                  <li><i class="fa fa-envelope" aria-hidden="true"></i>angelbaro44@icloud.com</li>
+                </ul>
+
+                <div class="social-media">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-google-plus-square"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-bottom">
+              Copyright &copy; Angel Baro 2020.
+    </div>
+          </div>
+          </footer>
     </BrowserRouter>
   );
   }

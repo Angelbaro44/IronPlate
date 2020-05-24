@@ -65,11 +65,11 @@ class YoutubeCycles extends Component {
 
             console.log(this);
             return (
-                  <div style={{width:'100%', height:'100%'}}>
+                  <div style={{textAlign:'-webkit-center', width:'100%', height:'100%'}}>
                   <br/><br/>
-                 <div><a className='home-h2-tag' id='redditHeaderUsername'>"{this.state.videoTitle}" by {this.state.videoChannelTitle} </a></div>
+                 <div><section  style={{width:'60%'}}><h2><a className='moble-off home-h2-tag' id='redditHeaderUsername'>"{this.state.videoTitle}"</a></h2></section></div>
                  <br/>
-                 <div style={{height:'80%'}}>
+                 <div style={{width:'100%', height:'80%'}}>
                  {/* <button className='youtubeButtonsLeft' onClick={this.negClicked}> <p className='verticalText'>Newer Video</p>  </button> */}
                               <div className='moble-video'><iframe  className='youtubeVideo' width="90%" height="90%" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                               {/* <button className='youtubeButtonsRight' onClick={this.posClicked}>  <p className='verticalText'>Older   Video</p>    </button> */}
