@@ -20,7 +20,12 @@ const actions = {
   },
   logOut: async () => {
     return await service.get('/logout')
+  },
+
+  updateData: async (data)=>{
+    return await service.post('/admindata',data)
   }
+
 };
 
 export default actions;

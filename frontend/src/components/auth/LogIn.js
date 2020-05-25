@@ -17,6 +17,7 @@ class LogIn extends Component {
     render() {
         return (
             <Fragment>
+                <br/><br/><br/><br/><br/><br/><br/><br/>
                 <h2>LogIn</h2>
                 <form onSubmit={this.handleSubmit}>
                     <input name="email" type="email" onChange={this.handleChange} />

@@ -16,10 +16,13 @@ class SignUp extends Component {
     render() {
         return (
             <Fragment>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 <h2>SignUP</h2>
+               
                 <form onSubmit={this.handleSubmit}>
-                    <input name="email" type="email" onChange={this.handleChange} />
-                    <input name="password" type="password" onChange={this.handleChange} />
+                    <input placeholder='email' name="email" type="email" onChange={this.handleChange} />
+                    <input placeholder='Password' name="password" type="password" onChange={this.handleChange} />
+                    <input placeholder='Name' name="name" type="text" onChange={this.handleChange}/>
                     <input type="submit" value="Sign Up"/>
                 </form>
             </Fragment>

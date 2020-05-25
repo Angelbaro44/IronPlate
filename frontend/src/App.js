@@ -4,10 +4,11 @@ import Home from './components/home/Home';
 import NotFound from './components/404/NotFound.js';
 import SignUp from './components/auth/SignUp';
 import LogIn from './components/auth/LogIn';
-import Profile from './components/profile/Profile'
-import actions from './services/index'
+import AdminData from './components/home/AdminPage';
+import Profile from './components/profile/Profile';
+import actions from './services/index';
 import './App.css';
-import 'bootstrap'
+import 'bootstrap';
 import {
   MDBNavbar,
   MDBNavbarBrand,
@@ -48,7 +49,7 @@ class App extends Component {
 
     return (
     <BrowserRouter>
-        {this.state.email}
+        {this.state.name}
         <nav className='nav'>
 
 
@@ -90,6 +91,9 @@ class App extends Component {
           >
             <MDBContainer>
               <MDBNavbarBrand>TAMIAMI BAPTIST CHURCH</MDBNavbarBrand>
+              <MDBNavItem><NavLink to="/sign-up">Sign Up </NavLink></MDBNavItem>
+             <MDBNavItem><NavLink to="/log-in">Log In </NavLink></MDBNavItem>
+             <MDBNavItem><NavLink to="/log-in">Live Service </NavLink></MDBNavItem>
               <MDBNavbarToggler
                 onClick={this.toggleCollapse('navbarCollapse1')}
               />
@@ -139,7 +143,7 @@ class App extends Component {
         <Route exact path="/log-in" render={(props) => <LogIn {...props} setUser={this.setUser}/>} />
         <Route exact path="/profile" render={(props) => <Profile {...props} user={this.state}/>} />
         
-        <Route component={NotFound} />
+        <Route exact path="/admin-page" render={(props)=><AdminData {...props} setUser={this.setUser} />} />
       </Switch>
 
 
@@ -153,7 +157,7 @@ class App extends Component {
 
 
 
-      <footer><div class="footer">
+      {/* <footer><div class="footer">
             <div class="inner-footer">
 
               <div class="footer-items">
@@ -204,7 +208,7 @@ class App extends Component {
               Copyright &copy; Angel Baro 2020.
     </div>
           </div>
-          </footer>
+          </footer> */}
     </BrowserRouter>
   );
   }

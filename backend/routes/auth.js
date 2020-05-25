@@ -38,7 +38,11 @@ router.get('/profile', isAuth, (req, res, next) => {
     .then((user) => res.status(200).json({ user }))
     .catch((err) => res.status(500).json({ err }));
 });
-
+router.post('/post', isAuth, (req,res)=>{
+  User.findByIdAndUpdate(req.user._id, {name:req.body.name}, {new:true})
+  .then(user => res.status(200).json({user}))
+  .catch((err) => res.status(500).json({ err }));
+})
 function isAuth(req, res, next) {
   req.isAuthenticated() ? next() : res.status(401).json({ msg: 'Log in first' });
 }
