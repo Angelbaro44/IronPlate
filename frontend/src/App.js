@@ -86,15 +86,15 @@ class App extends Component {
                   <MDBContainer>
           <MDBNavbar
             id='nav-bar'
-            style={{ marginTop: '20px' }}
+            style={{ marginTop: '20px', padding:'0' }}
             light
           >
-            <MDBContainer>
-              <MDBNavbarBrand>TAMIAMI BAPTIST CHURCH</MDBNavbarBrand>
+            <MDBContainer id='nav-filter'>
+              <MDBNavbarBrand><NavLink to='/'>TAMIAMI BAPTIST CHURCH</NavLink></MDBNavbarBrand>
               <MDBNavItem><NavLink to="/sign-up">Sign Up </NavLink></MDBNavItem>
              <MDBNavItem><NavLink to="/log-in">Log In </NavLink></MDBNavItem>
-             <MDBNavItem><NavLink to="/log-in">Live Service </NavLink></MDBNavItem>
-              <MDBNavbarToggler
+             <MDBNavItem><a href="https://www.youtube.com/user/tamiamibaptistchurch/live">Live Service </a></MDBNavItem>
+              <MDBNavbarToggler id='menu-btn-correction'
                 onClick={this.toggleCollapse('navbarCollapse1')}
               />
               <MDBCollapse

@@ -15,17 +15,23 @@ class SignUp extends Component {
     }
     render() {
         return (
-            <Fragment>
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                <h2>SignUP</h2>
-               
-                <form onSubmit={this.handleSubmit}>
-                    <input placeholder='email' name="email" type="email" onChange={this.handleChange} />
-                    <input placeholder='Password' name="password" type="password" onChange={this.handleChange} />
-                    <input placeholder='Name' name="name" type="text" onChange={this.handleChange}/>
-                    <input type="submit" value="Sign Up"/>
-                </form>
-            </Fragment>
+            <div className='signup-master-div'>
+                <div className='signup-daddy-div'>
+                    <div className='signup-son-div'>
+                        
+                        <h2>SignUP</h2>
+                       
+                        <form className='signup-form-tag' onSubmit={this.handleSubmit}>
+                         <p>Name:<input placeholder='name' name="name" type="text" onChange={this.handleChange}/></p>
+                         <div id='org-form-input'>
+                             <p>Email:<input placeholder='email' name="email" type="email" onChange={this.handleChange} /></p>
+                            <p>Password:<input placeholder='password' name="password" type="password" onChange={this.handleChange} /></p>
+                         </div>
+                         <input type="submit" value="Sign Up"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
         );
     }
 }

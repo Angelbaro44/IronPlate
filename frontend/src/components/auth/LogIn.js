@@ -16,16 +16,18 @@ class LogIn extends Component {
     }
     render() {
         return (
-            <Fragment>
-                <br/><br/><br/><br/><br/><br/><br/><br/>
+            <div className='signup-master-div'>
+                <div className='signup-daddy-div'>
+                    <div className='signup-son-div'>
                 <h2>LogIn</h2>
-                <form onSubmit={this.handleSubmit}>
-                    <input name="email" type="email" onChange={this.handleChange} />
-                    <input name="password" type="password" onChange={this.handleChange} />
+                <form className='signup-form-tag' onSubmit={this.handleSubmit}>
+                    <p>Email:<input placeholder='email' name="email" type="email" onChange={this.handleChange} /></p>
+                    <p>Password:<input placeholder='password' name="password" type="password" onChange={this.handleChange} /></p>
                     <input type="submit" value="Log In"/>
                 </form>
-            </Fragment>
-        );
+                </div>
+                </div>
+            </div>        );
     }
 }
 

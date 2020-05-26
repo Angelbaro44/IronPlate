@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-
+import '../../../src/App.css'
 const apiKey = 'AIzaSyDZNDn44BCa7TZCnCwrHJoOwNeqBbSQqD8';
 const channelID = 'UCIvK3zry6RI7308u5IGbNSg';
 const limit = 1;
@@ -67,14 +67,14 @@ class YoutubeCycles extends Component {
             return (
                   <div style={{textAlign:'-webkit-center', width:'100%', height:'100%'}}>
                   <br/><br/>
-                 <div><section  style={{width:'60%'}}><h2><a className='moble-off home-h2-tag' id='redditHeaderUsername'>"{this.state.videoTitle}"</a></h2></section></div>
+                 <div><section  style={{width:'60%'}}><h2 className='moble-off home-h2-tag-white'><a  id='redditHeaderUsername'>"{this.state.videoTitle}"</a></h2></section></div>
                  <br/>
                  <div style={{width:'100%', height:'80%'}}>
                  {/* <button className='youtubeButtonsLeft' onClick={this.negClicked}> <p className='verticalText'>Newer Video</p>  </button> */}
-                              <div className='moble-video'><iframe  className='youtubeVideo' width="90%" height="90%" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              <div className='moble-video'><iframe  className='youtubeVideo' width="70%" height="90%" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                               {/* <button className='youtubeButtonsRight' onClick={this.posClicked}>  <p className='verticalText'>Older   Video</p>    </button> */}
                               <br/>
-                              <Link className='home-links-btn'><botton>More Videos...</botton></Link>
+                              <Link to='/' className='home-links-btn-white'><button >More Videos</button></Link>
 
                  </div>
                  <br/><br/><br/>

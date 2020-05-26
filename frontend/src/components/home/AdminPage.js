@@ -24,8 +24,8 @@ class AdminPage extends Component {
                   <h2>SignUP</h2>
                  
                   <form onSubmit={this.handleSubmit}>
-                      <input placeholder='email' name="welcomeText" type="text" onChange={this.handleChange} />
-                      <input placeholder='Password' name="missionStatment" type="text" onChange={this.handleChange} />
+                      <p>Welcome text on the home page:<br/><input placeholder='welcome text' name="welcomeText" type="text" onChange={this.handleChange} /></p>
+                      <p>Mission statment text :<br/><input placeholder='mission statmen' name="missionStatment" type="text" onChange={this.handleChange} /></p>
                       <input type="submit" value="Save"/>
                   </form>
               </React.Fragment>

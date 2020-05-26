@@ -24,6 +24,10 @@ const actions = {
 
   updateData: async (data)=>{
     return await service.post('/admindata',data)
+  },
+
+  getData: async ()=>{
+    return await service.get('/admindata')
   }
 
 };

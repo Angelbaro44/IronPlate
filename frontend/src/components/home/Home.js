@@ -6,6 +6,10 @@ import YoutubeCycles from '../home/YoutubeCycles';
 import { Link } from 'react-router-dom';
 
 class Home extends Component {
+  state={
+
+  }
+
   async componentDidMount() {
     var debugInput = document.querySelector("input");
     function updateDebugState() {
@@ -13,9 +17,23 @@ class Home extends Component {
     }
     debugInput.addEventListener("click", updateDebugState);
     updateDebugState();
+    
+
+              actions.getData().then(post=> {
+                  this.setState({
+                    post:post.data
+                  })
+              }).catch(({ response }) => console.error(response.data));
+
+
   }
 
+
+
+
+
   render() {
+    console.log(this)
     return (
       <React.Fragment>
         <div class="debug">
@@ -27,18 +45,19 @@ class Home extends Component {
 
         <div class="parallax">
           <div id="group1" class="parallax__group">
+
             <div class="parallax__layer parallax__layer--fore">
               <div class="title">
 
               <div>
-                  <h1>Join us for church online this sunday</h1>
+                  <h1 className='home-h1-tag'>Join us for church online this sunday</h1>
                   <br />
                   <br />
                   <br />
-                  <Link className='home-links-btn-white'><button >Watch Live online</button></Link>
+                  <Link to='/'className='home-links-btn-white'><button >Watch Live online</button></Link>
                   <br />
                   <br />
-                  <Link className='home-links-btn-white'><button >Pastor's Message</button></Link>
+                  <Link to='/'className='home-links-btn-white'><button >Pastor's Message</button></Link>
                 </div>
                 {/* <img className='moble-off' width='600px' src='images/test-church-2.jpg'></img> */}
 
@@ -48,28 +67,24 @@ class Home extends Component {
 
 
               </div>
-            </div>
+            
             <div class="parallax__layer parallax__layer--base">
-              <div id='make-row' class="title">
+              <div  class="title">
               <video  autoPlay  loop muted preload src="images/test-church-video.mp4" type="video/mp4"/>
 
                 
             </div>
           </div>
+          </div>
           <div id="group2" class="parallax__group">
-            <div class="parallax__layer parallax__layer--fore">
-              <div class="title">
-
-
-              </div>
-            </div>
+            
             <div class="parallax__layer parallax__layer--base">
               <div class="title">
                 <section><h2 className='home-h2-tag-white'>Welcome to Church</h2></section>
                 <br/>
                 <section id='screen-70'><p className='home-p-tag-white'>Tamiami Baptist Church is an authentic church in Miami for everyday people of all ages, cultures and backgrounds. Whoever you are and wherever you've been, you're welcome to join us to connect, be inspired and grow through Jesus and a genuine sense of belonging.</p></section>
                 <br/>
-                <Link className='home-links-btn-white'><button >Join Us</button></Link>
+                <Link to='/' className='home-links-btn-white'><button >Join Us</button></Link>
 
 
               </div>
@@ -83,14 +98,7 @@ class Home extends Component {
             </div>
           </div>
           <div id="group3" class="parallax__group" >
-            <div class="parallax__layer parallax__layer--fore">
-              <div class="title">
-
-
-
-
-              </div>
-            </div>
+            
             <div class="parallax__layer parallax__layer--base">
               <div id='make-row' class="title">
 
@@ -106,7 +114,7 @@ class Home extends Component {
                   Since then the English ministry has been revitalized through the faithful preaching and teaching of God’s word. A Spanish ministry was also launched in 2007 to proclaim the gospel of Christ to our Hispanic community. We are a church committed to follow Christ and make disciples out of all peoples.
                  </p>
 
-                  <Link className='home-links-btn-black'><button >Read More</button></Link>
+                  <Link to='/' className='home-links-btn-black'><button >Read More</button></Link>
                 </div>
                 <img className='moble-off' width='300px' src='images/test-welcome-to-church.jpg'></img>
 
@@ -115,13 +123,7 @@ class Home extends Component {
             </div>
           </div>
           <div id="group4" class="parallax__group">
-            <div class="parallax__layer parallax__layer--fore">
-              <div class="title">
-
-
-
-              </div>
-            </div>
+            
             <div class="parallax__layer parallax__layer--base">
               <div class="title">
                 <div style={{ width:'100%',height: '100%' }}> <YoutubeCycles /></div>
@@ -146,13 +148,7 @@ class Home extends Component {
             </div>
           </div>
           <div id="group5" class="parallax__group">
-            <div class="parallax__layer parallax__layer--fore">
-              <div class="title">
-
-
-
-              </div>
-            </div>
+            
             <div class="parallax__layer parallax__layer--base">
             <div id='make-row' class="title">
 
@@ -163,20 +159,14 @@ class Home extends Component {
                 {/* <h3 className='home-h2-tag-black moble-off'>vision</h3>
                 <p className='home-p-tag-black moble-off'>We envision a church vibrant with the enthusiasm of knowing God and making Him known as we grow through the study of our reformed faith; that system of doctrine that best explains the Scriptures as expressed in our Baptist confession of faith of 1689. We pray that God may use our ministry to call and develop lay leaders, teachers, elders, and pastors that may pass on the legacy of Grace in our reformed faith to the next generation of faithful Disciples of Christ.
               2 Timothy 2:1-2, 14-15, 3:14-17</p> */}
-                <Link className='home-links-btn-black'><button >Read More</button></Link>
+                <Link to='/'className='home-links-btn-black'><button >Read More</button></Link>
               </div>
               <img className='moble-off mission-image' width='400px' src='images/test-bible.jpeg'></img>
               </div>
             </div>
           </div>
           <div id="group6" class="parallax__group">
-            <div class="parallax__layer parallax__layer--fore">
-              <div class="title">
-
-
-
-              </div>
-            </div>
+            
             <div class="parallax__layer parallax__layer--back">
               <div class="title">
 
@@ -185,7 +175,7 @@ class Home extends Component {
               </div>
             </div>
             <div class="parallax__layer parallax__layer--base">
-              <div id='make-col' class="title ">
+              <div id='make-col'style={{justifyContent:'space-evenly'}} class="title ">
                 <section>
                     <h2  className='home-h2-tag-white'>Church Hours</h2>
               </section>
@@ -218,13 +208,7 @@ class Home extends Component {
             </div>
           </div>
           <div id="group7" class="parallax__group">
-            <div class="parallax__layer parallax__layer--fore">
-              <div class="title">
-
-
-
-              </div>
-            </div>
+           
             <div class="parallax__layer parallax__layer--base">
               <div class="title">
                 <MDBContainer>
