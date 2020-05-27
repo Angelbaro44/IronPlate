@@ -54,7 +54,7 @@ app.use(passport.session());
 
 //app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static(path.join(__dirname, '../frontend/build')))
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -63,14 +63,17 @@ app.use(logger('dev'));
 
 const index = require('./routes/index');
 const auth = require('./routes/auth');
-const AdminData = require('./routes/AdminRoutes')
+const AdminData = require('./routes/AdminRoutes');
+const Quotes = require('./routes/QuotesRoutes');
+
 app.use('/', index);
 app.use('/', auth);
-app.use('/', AdminData)
+app.use('/', AdminData);
+app.use('/', Quotes);
 
 // Uncomment this line for production
-let client = path.join(__dirname + '../public/index.html')
-console.log('client',client)
+let client = path.join(__dirname + '../public/index.html');
+console.log('client',client);
 //app.get('*', (req, res) => res.sendFile(client));
 // For any other routes, redirect to the index.html file of React
 // app.get('*', (req, res) => {

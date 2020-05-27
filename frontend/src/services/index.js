@@ -28,8 +28,15 @@ const actions = {
 
   getData: async ()=>{
     return await service.get('/admindata')
-  }
+  },
 
+  postQuote: async (data)=>{
+    return await service.post('/quotes',data)
+  },
+
+  getQuote: async ()=>{
+    return await service.get('/quotes')
+  }
 };
 
 export default actions;
