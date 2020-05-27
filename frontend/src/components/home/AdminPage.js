@@ -48,31 +48,35 @@ class AdminPage extends Component {
 
       render() {
           return (
-              <React.Fragment>
-                  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                  <div>
-                      <h2>New Quotes</h2>
-                     
-                      <form onSubmit={this.handleSubmitQuotes}>
-                          <p>Quote title:<br/><input placeholder='quote title' name="quote_title" type="text" onChange={this.handleChangeQuotes} /></p>
-                          <p>Quote message :<br/><input placeholder='quote message' name="quote_body" type="text" onChange={this.handleChangeQuotes} /></p>
-                          <p>Quote chapter and line :<br/><input placeholder='quote source' name="quote_source" type="text" onChange={this.handleChangeQuotes} /></p>
-                          <p>Quote was posted by :<br/><input placeholder='posted by' name="quote_by" type="text" onChange={this.handleChangeQuotes} /></p>
-
-                          <input type="submit" value="Save"/>
-                      </form>
-                  </div>
-
-                  <div>
-                      <h2>Admin Edits</h2>
-                     
-                      <form onSubmit={this.handleSubmit}>
-                          <p>Welcome text on the home page:<br/><input placeholder='welcome text' name="welcomeText" type="text" onChange={this.handleChange} /></p>
-                          <p>Mission statment text :<br/><input placeholder='mission statmen' name="missionStatment" type="text" onChange={this.handleChange} /></p>
-                          <input type="submit" value="Save"/>
-                      </form>
-                  </div>
-              </React.Fragment>
+              <div className='signup-master-div'>
+                  <div className='signup-daddy-div'>
+                      
+                      <div className='signup-son-div'>
+                          <h2>New Quotes</h2>
+                         
+                          <form className='signup-form-tag' onSubmit={this.handleSubmitQuotes}>
+                              <p>Quote title:<br/><input placeholder='quote title' name="quote_title" type="text" onChange={this.handleChangeQuotes} /></p>
+                              <p>Quote message :<br/><input placeholder='quote message' name="quote_body" type="text" onChange={this.handleChangeQuotes} /></p>
+                              <p>Quote chapter and line :<br/><input placeholder='quote source' name="quote_source" type="text" onChange={this.handleChangeQuotes} /></p>
+                              <p>Quote was posted by :<br/><input placeholder='posted by' name="quote_by" type="text" onChange={this.handleChangeQuotes} /></p>
+    
+                              <input type="submit" value="Save"/>
+                          </form>
+                      </div>
+    
+                      <div className='signup-son-div'>
+                          <h2>Admin Edits</h2>
+                         
+                          <form className='signup-form-tag' onSubmit={this.handleSubmit}>
+                              <div>
+                                  <p>Welcome text on the home page:<br/><input placeholder='welcome text' name="welcomeText" type="text" onChange={this.handleChange} /></p>
+                                  <p>Mission statment text :<br/><input placeholder='mission statmen' name="missionStatment" type="text" onChange={this.handleChange} /></p>
+                              </div>
+                              <input type="submit" value="Save"/>
+                          </form>
+                      </div>
+                  </div >
+              </div>
           );
       }
 }

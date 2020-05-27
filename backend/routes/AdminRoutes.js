@@ -5,7 +5,7 @@ const AdminData =  require('../models/AdminData');
 
 router.get('/admindata',(req,res)=>{
       AdminData.find().then(data => res.status(200)
-      .json(data[2].name))
+      .json(data))
       .catch((err) => res.status(500).json({ err }));
 
 

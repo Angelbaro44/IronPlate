@@ -21,13 +21,16 @@ class LogIn extends Component {
                     <div className='signup-son-div'>
                 <h2>LogIn</h2>
                 <form className='signup-form-tag' onSubmit={this.handleSubmit}>
-                    <p>Email:<input placeholder='email' name="email" type="email" onChange={this.handleChange} /></p>
-                    <p>Password:<input placeholder='password' name="password" type="password" onChange={this.handleChange} /></p>
+                    <div>
+                        <p>Email:<input placeholder='email' name="email" type="email" onChange={this.handleChange} /></p>
+                        <p>Password:<input placeholder='password' name="password" type="password" onChange={this.handleChange} /></p>
+                    </div>
                     <input type="submit" value="Log In"/>
                 </form>
                 </div>
                 </div>
-            </div>        );
+            </div>      
+              );
     }
 }
 

@@ -22,11 +22,12 @@ class SignUp extends Component {
                         <h2>SignUP</h2>
                        
                         <form className='signup-form-tag' onSubmit={this.handleSubmit}>
-                         <p>Name:<input placeholder='name' name="name" type="text" onChange={this.handleChange}/></p>
-                         <div id='org-form-input'>
+                         <div>
+                             <p>Name:<input placeholder='name' name="name" type="text" onChange={this.handleChange}/></p>
                              <p>Email:<input placeholder='email' name="email" type="email" onChange={this.handleChange} /></p>
-                            <p>Password:<input placeholder='password' name="password" type="password" onChange={this.handleChange} /></p>
+                             <p>Password:<input placeholder='password' name="password" type="password" onChange={this.handleChange} /></p>
                          </div>
+                         
                          <input type="submit" value="Sign Up"/>
                         </form>
                     </div>

@@ -172,8 +172,10 @@ button:hover{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat ;
-width:100vw;
-height: 100vh;
+width:100%;
+height: 100%;
+min-height: 100vh;
+padding:120px 0px;
 
 }
 
@@ -202,6 +204,7 @@ width: 50%;
 height: 50%;
 backdrop-filter: grayscale(0.5) blur(10px) contrast(.8);
 border-radius: 70px;
+padding: 20px;
 }
 #nav-filter{
   backdrop-filter: grayscale(0) blur(3px) opacity(.9) saturate(1) hue-rotate(300deg) contrast(2);

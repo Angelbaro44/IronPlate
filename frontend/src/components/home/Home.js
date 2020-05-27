@@ -10,7 +10,7 @@ class Home extends Component {
 
   }
 
-  async componentDidMount() {
+ async componentDidMount() {
     var debugInput = document.querySelector("input");
     function updateDebugState() {
       document.body.classList.toggle('debug-on', debugInput.checked);
@@ -18,12 +18,12 @@ class Home extends Component {
     debugInput.addEventListener("click", updateDebugState);
     updateDebugState();
     
-
-              actions.getData().then(post=> {
+              await actions.getData().then(post=> {
+                console.log(post.data)
                   this.setState({
                     post:post.data
                   })
-              }).catch(({ response }) => console.error(response.data));
+              }).catch(({ response }) => console.error(response));
 
 
   }
@@ -32,8 +32,8 @@ class Home extends Component {
 
 
 
-  render() {
-    console.log(this)
+ render() {
+    console.log(this.state)
     return (
       <React.Fragment>
         <div class="debug">
@@ -82,7 +82,7 @@ class Home extends Component {
               <div class="title">
                 <section><h2 className='home-h2-tag-white'>Welcome to Church</h2></section>
                 <br/>
-                <section id='screen-70'><p className='home-p-tag-white'>Tamiami Baptist Church is an authentic church in Miami for everyday people of all ages, cultures and backgrounds. Whoever you are and wherever you've been, you're welcome to join us to connect, be inspired and grow through Jesus and a genuine sense of belonging.</p></section>
+                <section id='screen-70'><p className='home-p-tag-white'>{this.state.post?.welcomeText}</p></section>
                 <br/>
                 <Link to='/' className='home-links-btn-white'><button >Join Us</button></Link>
 
@@ -154,8 +154,7 @@ class Home extends Component {
 
               <div className='moble-fixed-div'>
                 <h2 className='home-h2-tag-black'>Mission Statment</h2>
-                <p className='home-p-tag-black'>It is our mission and purpose to develop a congregation with the passion of knowing God and making Him known through our reformed faith. We aim to become a channel of His Grace for God to seek, save, & restore the lost through our faithful witness of the Gospel of Christ; to receive and disciple those whom God adds to His body, instructing them in water Baptism & Holy Communion in obedience to the Lord. We desire to ground believers in sound Biblical doctrine as explained in our 1689 Reformed Baptist Confession of Faith, as we manifest the fruit & the gifts of the Holy Spirit for our growth, edification and God’s Glory.
-              Ephesians 4:11-16</p>
+ <p className='home-p-tag-black'>{this.state.post?.missionStatment}</p>
                 {/* <h3 className='home-h2-tag-black moble-off'>vision</h3>
                 <p className='home-p-tag-black moble-off'>We envision a church vibrant with the enthusiasm of knowing God and making Him known as we grow through the study of our reformed faith; that system of doctrine that best explains the Scriptures as expressed in our Baptist confession of faith of 1689. We pray that God may use our ministry to call and develop lay leaders, teachers, elders, and pastors that may pass on the legacy of Grace in our reformed faith to the next generation of faithful Disciples of Christ.
               2 Timothy 2:1-2, 14-15, 3:14-17</p> */}
