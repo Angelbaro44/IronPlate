@@ -202,12 +202,12 @@ height: 100%;
   justify-content: center;
 width: 50%;
 height: 50%;
-backdrop-filter: grayscale(0.5) blur(10px) contrast(.8);
+backdrop-filter: grayscale(0.5) blur(10px) contrast(.8) ;
 border-radius: 70px;
 padding: 20px;
 }
 #nav-filter{
-  backdrop-filter: grayscale(0) blur(3px) opacity(.9) saturate(1) hue-rotate(300deg) contrast(2);
+  backdrop-filter: grayscale(0) blur(3px) saturate(1) hue-rotate(300deg) contrast(2);
   height:100%;
   width:100%;
   margin:0;

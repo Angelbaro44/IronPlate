@@ -5,6 +5,7 @@ import NotFound from './components/404/NotFound.js';
 import SignUp from './components/auth/SignUp';
 import LogIn from './components/auth/LogIn';
 import AdminData from './components/home/AdminPage';
+import Quotes from './components/home/Quotes'
 import Profile from './components/profile/Profile';
 import actions from './services/index';
 import './App.css';
@@ -142,7 +143,7 @@ class App extends Component {
         <Route exact path="/sign-up" render={(props)=><SignUp {...props} setUser={this.setUser} />} />
         <Route exact path="/log-in" render={(props) => <LogIn {...props} setUser={this.setUser}/>} />
         <Route exact path="/profile" render={(props) => <Profile {...props} user={this.state}/>} />
-        
+        <Route exact path='/quotes-of-god' render={(props)=><Quotes {...props} setUser={this.setUser} />} />
         <Route exact path="/admin-page" render={(props)=><AdminData {...props} setUser={this.setUser} />} />
       </Switch>
 

@@ -21,7 +21,7 @@ class Home extends Component {
               await actions.getData().then(post=> {
                 console.log(post.data)
                   this.setState({
-                    post:post.data
+                    post:post.data[0]
                   })
               }).catch(({ response }) => console.error(response));
 
