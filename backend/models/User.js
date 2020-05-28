@@ -5,6 +5,11 @@ const userSchema = new Schema(
   {
     email: String,
     name: String,
+    role:{
+      type:String,
+      enum:['admin','user'],
+      default:'user',
+    }
   },
   {
     timestamps: true,

@@ -6,6 +6,7 @@ import actions from '../../services/index';
 
 class AdminPage extends Component {
       state = {
+        loading:false
 
       } 
 
@@ -17,9 +18,17 @@ class AdminPage extends Component {
   
       handleSubmitQuotes =  e => {
           e.preventDefault()
+          console.log(this.state)
+          this.setState({
+              loading:true
+          })
               actions.postQuote(this.state).then(quote=> {
                   // this.props.setUser({...post.data})  
                   console.log(quote.data)
+                  this.setState({
+                      quote_title:'',
+                      loading:false
+                  })
               }).catch(({ response }) => console.error(response.data));
       }
 
@@ -53,14 +62,14 @@ class AdminPage extends Component {
                       
                       <div className='signup-son-div'>
                           <h2>New Quotes</h2>
-                         
+                         {this.state.loading?<p>loading...</p>:null}
                           <form className='signup-form-tag' onSubmit={this.handleSubmitQuotes}>
-                              <p>Quote title:<br/><input placeholder='quote title' name="quote_title" type="text" onChange={this.handleChangeQuotes} /></p>
+                              <p>Quote title:<br/><input placeholder='quote title' name="quote_title" type="text" value={this.state.quote_title} required onChange={this.handleChangeQuotes} /></p>
                               <p>Quote message :<br/><input placeholder='quote message' name="quote_body" type="text" onChange={this.handleChangeQuotes} /></p>
                               <p>Quote chapter and line :<br/><input placeholder='quote source' name="quote_source" type="text" onChange={this.handleChangeQuotes} /></p>
                               <p>Quote was posted by :<br/><input placeholder='posted by' name="quote_by" type="text" onChange={this.handleChangeQuotes} /></p>
     
-                              <input type="submit" value="Save"/>
+                              <input type="submit" disabled={this.state.loading} value="Save"/>
                           </form>
                       </div>
     

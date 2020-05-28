@@ -47,7 +47,7 @@ class App extends Component {
   }
 
   render(){
-
+console.log(this.state)
     return (
     <BrowserRouter>
         {this.state.name}
@@ -94,7 +94,7 @@ class App extends Component {
               <MDBNavbarBrand><NavLink to='/'>TAMIAMI BAPTIST CHURCH</NavLink></MDBNavbarBrand>
               <MDBNavItem><NavLink to="/sign-up">Sign Up </NavLink></MDBNavItem>
              <MDBNavItem><NavLink to="/log-in">Log In </NavLink></MDBNavItem>
-             <MDBNavItem><NavLink to="/admin-page">admin </NavLink></MDBNavItem>
+             {this.state.role==='admin'?<MDBNavItem><NavLink to="/admin-page">admin </NavLink></MDBNavItem>:null}
              <MDBNavItem><a href="https://www.youtube.com/user/tamiamibaptistchurch/live">Live Service </a></MDBNavItem>
               <MDBNavbarToggler id='menu-btn-correction'
                 onClick={this.toggleCollapse('navbarCollapse1')}
@@ -146,7 +146,7 @@ class App extends Component {
         <Route exact path="/log-in" render={(props) => <LogIn {...props} setUser={this.setUser}/>} />
         <Route exact path="/profile" render={(props) => <Profile {...props} user={this.state}/>} />
         <Route exact path='/quotes' render={(props)=><Quotes {...props} setUser={this.setUser} />} />
-        <Route exact path="/admin-page" render={(props)=><AdminData {...props} setUser={this.setUser} />} />
+        {this.state.role==='admin'?<Route exact path="/admin-page" render={(props)=><AdminData {...props} setUser={this.setUser} />} />:null}
       </Switch>
 
 

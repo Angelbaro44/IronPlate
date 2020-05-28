@@ -10,6 +10,12 @@ class Home extends Component {
 
   }
 
+adminCheck=()=>{
+  // this.state.isAdmin:
+}
+
+
+
  async componentDidMount() {
     var debugInput = document.querySelector("input");
     function updateDebugState() {
