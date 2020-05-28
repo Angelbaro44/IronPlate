@@ -95,6 +95,7 @@ class App extends Component {
               <MDBNavItem><NavLink to="/sign-up">Sign Up </NavLink></MDBNavItem>
              <MDBNavItem><NavLink to="/log-in">Log In </NavLink></MDBNavItem>
              <MDBNavItem><NavLink to="/admin-page">admin </NavLink></MDBNavItem>
+             <MDBNavItem><NavLink to="/quotes">quotes </NavLink></MDBNavItem>
              <MDBNavItem><a href="https://www.youtube.com/user/tamiamibaptistchurch/live">Live Service </a></MDBNavItem>
               <MDBNavbarToggler id='menu-btn-correction'
                 onClick={this.toggleCollapse('navbarCollapse1')}
@@ -115,14 +116,15 @@ class App extends Component {
                     <MDBNavLink to='#!'>MINISTRIES</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                  <MDBNavLink to='#!'>Resorcses</MDBNavLink>
-                  </MDBNavItem>
+                    <NavLink to="/quotes">quotes </NavLink>
+                    </MDBNavItem>
                   <MDBNavItem>
                     <MDBNavLink to='#!'>SAINTS & SINNERS</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
                     <MDBNavLink to='#!'>CONTACT US</MDBNavLink>
                   </MDBNavItem>
+
                 </MDBNavbarNav>
               </MDBCollapse>
             </MDBContainer>
