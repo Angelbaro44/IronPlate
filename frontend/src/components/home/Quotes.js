@@ -6,7 +6,8 @@ import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDB
 
 class Quotes extends Component {
       state = {
-            post:[]
+            post:[],
+            index:0
       }
 
       componentDidMount() {
@@ -19,20 +20,33 @@ class Quotes extends Component {
             }).catch(({ response }) => console.error(response));
       }
 
+
+
+deleteOne= (_id) =>{
+      actions.deleteQuote({_id}).then(data => {
+            console.log(data)
+      }).catch(({ response }) => console.error(response)); 
+}
+
+
+
+
+
+
       displayterms = () => {
             return (
                   this.state.post.map((count, i) => {
-
-
+                             
                         return (
 
 
                               <div className='quote-block-div'>
-                                          <button>X</button>
+                                          <button  onClick={()=>this.deleteOne(count._id)}></button>
                                           <h3 >{count.quote_title}</h3>
                                           <p >{count.quote_body}</p>
                                           <p >{count.quote_source}</p>
                                           <p >{count.quote_by}</p>
+                                          <p >{count._id}</p>
                               </div>
 
 

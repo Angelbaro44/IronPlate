@@ -33,7 +33,9 @@ const actions = {
   postQuote: async (data)=>{
     return await service.post('/quotes',data)
   },
-
+  deleteQuote: async (data)=>{
+    return await service.post('/quotes/delete',data)
+  },
   getQuote: async ()=>{
     return await service.get('/quotes')
   }

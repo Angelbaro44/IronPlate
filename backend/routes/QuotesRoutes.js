@@ -12,8 +12,12 @@ router.get('/quotes',(req,res)=>{
 })
 router.post('/quotes', isAuth,(req,res)=>{
       console.log(req.user)
+      console.log(req.body)
+
       if(req.user.role==='admin'){
       Quotes.create(req.body)
+      Quotes.deleteOne(req.body)
+
       .then(data => res.status(200).json(data))
       .catch((err) => res.status(500).json({ err }));
       }
@@ -21,7 +25,17 @@ router.post('/quotes', isAuth,(req,res)=>{
             res.status(69).json({'No NO Spot Touched':req.user});
       }
 })
-
+router.post('/quotes/delete', isAuth,(req,res)=>{
+      console.log(req.body)
+      if(req.user.role==='admin'){
+      Quotes.deleteOne({_id:req.body._id})
+      .then(data => res.status(200).json(data))
+      .catch((err) => res.status(500).json({ err }));
+      }
+      else{
+            res.status(69).json({'No No Spot Touched':req.user});
+      }
+})
 
 
 
