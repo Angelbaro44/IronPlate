@@ -28,7 +28,15 @@ class Quotes extends Component {
 
 deleteOne= (_id) =>{
       actions.deleteQuote({_id}).then(data => {
-            console.log(data)
+            console.log(data);
+            this.setState({post:[]});
+                  actions.getQuote().then(post => {
+                        console.log(post.data)
+                        this.setState({
+                              post: post.data
+                        })
+                  }).catch(({ response }) => console.error(response));
+            
       }).catch(({ response }) => console.error(response)); 
 }
 
@@ -50,7 +58,6 @@ deleteOne= (_id) =>{
                                           <p >{count.quote_body}</p>
                                           <p >{count.quote_source}</p>
                                           <p >{count.quote_by}</p>
-                                          <p >{count._id}</p>
                               </div>
 
 
