@@ -10,7 +10,7 @@ class Quotes extends Component {
             index:0
       }
 
-      componentDidMount() {
+      async componentDidMount() {
 
             actions.getQuote().then(post => {
                   console.log(post.data)
@@ -18,6 +18,10 @@ class Quotes extends Component {
                         post: post.data
                   })
             }).catch(({ response }) => console.error(response));
+
+            let user = await actions.isLoggedIn()
+            this.setState({...user.data})
+            console.log('coolest ')
       }
 
 
@@ -41,7 +45,7 @@ deleteOne= (_id) =>{
 
 
                               <div className='quote-block-div'>
-                                          <button  onClick={()=>this.deleteOne(count._id)}></button>
+                                          {this.state.role==='admin'?<button  onClick={()=>this.deleteOne(count._id)}>X</button>:null}
                                           <h3 >{count.quote_title}</h3>
                                           <p >{count.quote_body}</p>
                                           <p >{count.quote_source}</p>
