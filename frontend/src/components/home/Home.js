@@ -227,6 +227,7 @@ class Home extends Component {
                       </li>
                     </ul>
                   </MDBRow>
+                  <br/>
                   <MDBRow id=" make-col">
 
                     <MDBCol md="9" id='make-col' className="md-0  make-col">
