@@ -3,7 +3,6 @@ import actions from '../../services/index'
 
 class SignUp extends Component {
     state = {
-
     } 
     handleChange = e => this.setState({[e.target.name]: e.target.value})
 

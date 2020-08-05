@@ -456,9 +456,7 @@ nav a:hover{
       background-repeat: no-repeat ;
       width:100%;
       height: 100%;
-      min-height: 97vh;
-      /* padding:120px 0px; */
-    
+      min-height: 97vh;    
     }
     
     .quotes-daddy-div{
@@ -478,9 +476,6 @@ nav a:hover{
       width: 100%;
       height: 90%;
       overflow: scroll;
-
-
-      
       }
 
       .quote-block-div{
@@ -504,41 +499,7 @@ nav a:hover{
         font-weight: bolder;
         border-radius: 12px;
         font-family: cursive;
-
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /* <---------- Start NavBar Style ---------------------> */
     /* <---------- Start NavBar Style ---------------------> */
@@ -549,72 +510,20 @@ nav a:hover{
       z-index: 10;
       position: fixed;
       width: 100%;
-      
-  
 }
 #nav-bar{
-  /* border-radius: 30px; */
-  border: 5px solid rgb(0, 0, 0);
-background-image: url(/images/test-nav-bar.jpg);
+      border: 5px solid rgb(0, 0, 0);
+      background-image: url(/images/test-nav-bar.jpg);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat ; 
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /* <---------- Start Home-Video Style ---------------------> */
     /* <---------- Start Home-Video Style ---------------------> */
     /* <---------- Start Home-Video Style ---------------------> */
     /* <---------- Start Home-Video Style --------------------->  */
-/* 
-#myVideo {
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-    }
-    
-    .content {
-      position: fixed;
-      bottom: 0;
-      color: #f1f1f1;
-      width: 100%;
-      padding: 20px;
-    }
-    
-    #myBtn {
-      width: 200px;
-      font-size: 18px;
-      padding: 10px;
-      border: none;
-      background: #000;
-      color: #fff;
-      cursor: pointer;
-    }
-    
-    #myBtn:hover {
-      background: #ddd;
-      color: black;
-    }
 
-
- */
 .youtubeVideo{
   box-shadow: rgb(0, 0, 0) 0px 0px 3px,  rgb(0, 0, 0) 0px 0px 5px, rgb(0, 0, 0) 0px 0px 8px, rgb(0, 0, 0) 0px 0px 9px;
 }

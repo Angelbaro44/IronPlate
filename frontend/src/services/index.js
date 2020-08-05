@@ -3,7 +3,6 @@ let baseURL;
 
 process.env.NODE_ENV === 'production'
   ? (baseURL = 'https://radiant-waters-58767.herokuapp.com')
-  // ? (baseURL = window.location.origin)
   : (baseURL = 'http://localhost:5000');
 
 const service = axios.create({ withCredentials: true, baseURL });
