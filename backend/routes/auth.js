@@ -17,7 +17,6 @@ router.post('/signup', (req, res, next) => {
 });
 
 
-//return await service.get('/is-logged-in');
 router.get('/is-logged-in', (req, res, next) => {  
   res.json(req.user)
 })

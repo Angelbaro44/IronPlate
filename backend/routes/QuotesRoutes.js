@@ -11,13 +11,9 @@ router.get('/quotes',(req,res)=>{
 
 })
 router.post('/quotes', isAuth,(req,res)=>{
-      console.log(req.user)
-      console.log(req.body)
-
       if(req.user.role==='admin'){
       Quotes.create(req.body)
       Quotes.deleteOne(req.body)
-
       .then(data => res.status(200).json(data))
       .catch((err) => res.status(500).json({ err }));
       }
@@ -26,7 +22,6 @@ router.post('/quotes', isAuth,(req,res)=>{
       }
 })
 router.post('/quotes/delete', isAuth,(req,res)=>{
-      console.log(req.body)
       if(req.user.role==='admin'){
       Quotes.deleteOne({_id:req.body._id})
       .then(data => res.status(200).json(data))
@@ -37,15 +32,8 @@ router.post('/quotes/delete', isAuth,(req,res)=>{
       }
 })
 
-
-
 function isAuth(req, res, next) {
       req.isAuthenticated() ? next() : res.status(401).json({ msg: 'Log in first' });
     }
-
-
-
-
-
 
 module.exports = router;
