@@ -36,7 +36,6 @@ class App extends Component {
     let user = await actions.isLoggedIn()
     this.setState({ ...user.data })
     console.log('coolest ')
-
   }
 
   setUser = (user) => this.setState(user)
