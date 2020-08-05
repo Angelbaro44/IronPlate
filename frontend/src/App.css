@@ -1,21 +1,4 @@
 
-    /* demo styles
-    --------------------------------------------- */
-    /* demo styles
-    --------------------------------------------- */
-    /* demo styles
-    --------------------------------------------- */
-    /* demo styles
-    --------------------------------------------- */
-
-    
-    body, html {
-    }
-  
-    body {
-    
-    }
-  
     * {
       margin:0;
       padding:0;
@@ -33,8 +16,6 @@ border: none;
 transition: .3s ease-in;
 z-index: 10;
 text-shadow: 1px 1px 3px rgb(0, 0, 0),1px 1px 5px rgb(0, 0, 0),1px 1px 8px rgb(0, 0, 0) ;
-
-
   }
   a{
     z-index: 10;
@@ -130,41 +111,10 @@ button:hover{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /* <---------- Start Sign-up and Log-in Direct Styles ---------------------> */
     /* <---------- Start Sign-up and Log-in Direct Styles ---------------------> */
     /* <---------- Start Sign-up and Log-in Direct Styles ---------------------> */
     /* <---------- Start Sign-up and Log-in Direct Styles --------------------->  */
-
-
-
-
-
-
-
-
-
 
 .signup-master-div{
   background-image: url(/images/test-cross-background.jpg);
@@ -284,8 +234,6 @@ nav a:hover{
             color: rgb(255, 255, 255);
             padding: 5px;
             text-shadow: 1px 1px 3px rgb(0, 0, 0),1px 1px 5px rgb(0, 0, 0),1px 1px 8px rgb(0, 0, 0) ;
-
-      
       }
     
     .home-p-tag-black{
@@ -294,7 +242,6 @@ nav a:hover{
       max-width: 600px;
       color: rgb(0, 0, 0);
       padding: 5px;
-
 }
       .moble-fixed-div{
         width:45%;
@@ -308,15 +255,12 @@ nav a:hover{
         display: flex;
         justify-content: space-evenly;
       }
-          
-    
     .home-links-btn-white{
       border-radius: 30px;
       border: 5px solid rgb(255, 255, 255);
       padding: 10px 30px;
       color:white;
       z-index: 10;
-
     }
     .home-links-btn-black{
       border-radius: 30px;
@@ -330,7 +274,6 @@ nav a:hover{
       color: #ffffff;
       padding: 5px;
       text-shadow: 1px 1px 3px rgb(0, 0, 0),1px 1px 5px rgb(0, 0, 0),1px 1px 8px rgb(0, 0, 0) ;
-
     }
     .home-h2-tag-black{
       text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.582);
@@ -344,7 +287,7 @@ nav a:hover{
     color: rgb(255, 255, 255);
     padding: 5px;
   }
-    
+  
     /* On screens that are 415px or less */
     @media screen and (max-width: 700px) {
       .title {
@@ -356,7 +299,6 @@ nav a:hover{
             justify-content: center;
             width: 100%;
             text-align: -webkit-center;
-
       }
       .moble-off{
         display: none;
@@ -377,17 +319,14 @@ nav a:hover{
       .moble-fixed-div{
         width:100%;
         margin: 10px;
-
       }
       .moble-on{
         display: flex;
-
       }
       .moble-to-col{
         flex-direction: column;
         display: flex;
         justify-content: space-evenly;
-
       }
       .home-links-btn-white{
         border-radius: 30px;
@@ -415,31 +354,6 @@ nav a:hover{
         padding: 5px;
       }
     } 
-  
-
-.home-h1-tag{
-
-}
-
-.home-h3-tag{
-
-}
-.home-h4-tag{
- 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     /* <---------- Start Quotes page Style ---------------------> */
@@ -460,13 +374,11 @@ nav a:hover{
     }
     
     .quotes-daddy-div{
-    
     width:100%;
     height: 100%;
     position: fixed;
     display: flex;
     align-items: flex-end;
-
     }
     
     .quotes-son-div{
