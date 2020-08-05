@@ -18,13 +18,11 @@ class AdminPage extends Component {
   
       handleSubmitQuotes =  e => {
           e.preventDefault()
-          console.log(this.state)
           this.setState({
               loading:true
           })
               actions.postQuote(this.state).then(quote=> {
                   // this.props.setUser({...post.data})  
-                  console.log(quote.data)
                   this.setState({
                       quote_title:'',
                       quote_body:'',
@@ -35,13 +33,6 @@ class AdminPage extends Component {
               }).catch(({ response }) => console.error(response.data));
       }
 
-
-
-
-
-
-
-
       handleChange = e => this.setState({[e.target.name]: e.target.value})
   
       handleSubmit =  e => {
@@ -50,8 +41,6 @@ class AdminPage extends Component {
             loading:true
         })
               actions.updateData(this.state).then(post=> {
-                  // this.props.setUser({...post.data})  
-                  console.log(post.data)
                   this.setState({
                     welcomeText:'',
                     missionStatment:'',
