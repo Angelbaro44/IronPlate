@@ -6,30 +6,22 @@ import YoutubeCycles from '../home/YoutubeCycles';
 import { Link } from 'react-router-dom';
 
 class Home extends Component {
-  state={
-
+  state = {
   }
 
-adminCheck=()=>{
-  // this.state.isAdmin:
-}
-
-
-
- async componentDidMount() {
+  async componentDidMount() {
     var debugInput = document.querySelector("input");
     function updateDebugState() {
       document.body.classList.toggle('debug-on', debugInput.checked);
     }
     debugInput.addEventListener("click", updateDebugState);
     updateDebugState();
-    
-              await actions.getData().then(post=> {
-                console.log(post.data)
-                  this.setState({
-                    post:post.data[0]
-                  })
-              }).catch(({ response }) => console.error(response));
+
+    await actions.getData().then(post => {
+      this.setState({
+        post: post.data[0]
+      })
+    }).catch(({ response }) => console.error(response));
 
 
   }
@@ -38,8 +30,7 @@ adminCheck=()=>{
 
 
 
- render() {
-    console.log(this.state)
+  render() {
     return (
       <React.Fragment>
         <div class="debug">
@@ -55,41 +46,40 @@ adminCheck=()=>{
             <div class="parallax__layer parallax__layer--fore">
               <div class="title">
 
-              <div>
+                <div>
                   <h1 className='home-h1-tag'>Join us for church online this sunday</h1>
                   <br />
                   <br />
                   <br />
-                  <Link to='/'className='home-links-btn-white'><button >Watch Live online</button></Link>
+                  <Link to='/' className='home-links-btn-white'><button >Watch Live online</button></Link>
                   <br />
                   <br />
-                  <Link to='/'className='home-links-btn-white'><button >Pastor's Message</button></Link>
+                  <Link to='/' className='home-links-btn-white'><button >Pastor's Message</button></Link>
                 </div>
-                {/* <img className='moble-off' width='600px' src='images/test-church-2.jpg'></img> */}
 
 
               </div>
 
 
 
-              </div>
-            
+            </div>
+
             <div class="parallax__layer parallax__layer--base">
-              <div  class="title">
-              <video  autoPlay  loop muted preload src="images/test-church-video.mp4" type="video/mp4"/>
+              <div class="title">
+                <video autoPlay loop muted preload src="images/test-church-video.mp4" type="video/mp4" />
 
-                
+
+              </div>
             </div>
           </div>
-          </div>
           <div id="group2" class="parallax__group">
-            
+
             <div class="parallax__layer parallax__layer--base">
               <div class="title">
                 <section><h2 className='home-h2-tag-white'>Welcome to Church</h2></section>
-                <br/>
+                <br />
                 <section id='screen-70'><p className='home-p-tag-white'>{this.state.post?.welcomeText}</p></section>
-                <br/>
+                <br />
                 <Link to='/' className='home-links-btn-white'><button >Join Us</button></Link>
 
 
@@ -104,20 +94,20 @@ adminCheck=()=>{
             </div>
           </div>
           <div id="group3" class="parallax__group" >
-            
+
             <div class="parallax__layer parallax__layer--base">
               <div id='make-row' class="title">
 
                 <div id='screen-70' className='moble-fixed-div'>
                   <h2 className='home-h2-tag-black'>About Us</h2>
                   <p className='home-p-tag-black'>
-                  Tamiami Baptist Church goes back in its foundations to the early 50’s. The church used to be a strong, vibrant community of believers where hundreds of people met for worship.
+                    Tamiami Baptist Church goes back in its foundations to the early 50’s. The church used to be a strong, vibrant community of believers where hundreds of people met for worship.
                   </p>
                   <p className='home-p-tag-black moble-off'>
-                  Its ministry was predominantly carried out in English and to an Anglo community. As the decades went by, the community changed and so did the church. In 2004, the Lord led Rev. David Menendez, with a small faithful remnant of followers of Christ, to once again up-lift Christ’s cross at the crossroads of Miami.
+                    Its ministry was predominantly carried out in English and to an Anglo community. As the decades went by, the community changed and so did the church. In 2004, the Lord led Rev. David Menendez, with a small faithful remnant of followers of Christ, to once again up-lift Christ’s cross at the crossroads of Miami.
                   </p>
                   <p className='home-p-tag-black moble-off'>
-                  Since then the English ministry has been revitalized through the faithful preaching and teaching of God’s word. A Spanish ministry was also launched in 2007 to proclaim the gospel of Christ to our Hispanic community. We are a church committed to follow Christ and make disciples out of all peoples.
+                    Since then the English ministry has been revitalized through the faithful preaching and teaching of God’s word. A Spanish ministry was also launched in 2007 to proclaim the gospel of Christ to our Hispanic community. We are a church committed to follow Christ and make disciples out of all peoples.
                  </p>
 
                   <Link to='/' className='home-links-btn-black'><button >Read More</button></Link>
@@ -129,10 +119,10 @@ adminCheck=()=>{
             </div>
           </div>
           <div id="group4" class="parallax__group">
-            
+
             <div class="parallax__layer parallax__layer--base">
               <div class="title">
-                <div style={{ width:'100%',height: '100%' }}> <YoutubeCycles /></div>
+                <div style={{ width: '100%', height: '100%' }}> <YoutubeCycles /></div>
 
 
 
@@ -154,24 +144,22 @@ adminCheck=()=>{
             </div>
           </div>
           <div id="group5" class="parallax__group">
-            
-            <div class="parallax__layer parallax__layer--base">
-            <div id='make-row' class="title">
 
-              <div className='moble-fixed-div'>
-                <h2 className='home-h2-tag-black'>Mission Statment</h2>
- <p className='home-p-tag-black'>{this.state.post?.missionStatment}</p>
-                {/* <h3 className='home-h2-tag-black moble-off'>vision</h3>
-                <p className='home-p-tag-black moble-off'>We envision a church vibrant with the enthusiasm of knowing God and making Him known as we grow through the study of our reformed faith; that system of doctrine that best explains the Scriptures as expressed in our Baptist confession of faith of 1689. We pray that God may use our ministry to call and develop lay leaders, teachers, elders, and pastors that may pass on the legacy of Grace in our reformed faith to the next generation of faithful Disciples of Christ.
-              2 Timothy 2:1-2, 14-15, 3:14-17</p> */}
-                <Link to='/'className='home-links-btn-black'><button >Read More</button></Link>
-              </div>
-              <img className='moble-off mission-image' width='400px' src='images/test-bible.jpeg'></img>
+            <div class="parallax__layer parallax__layer--base">
+              <div id='make-row' class="title">
+
+                <div className='moble-fixed-div'>
+                  <h2 className='home-h2-tag-black'>Mission Statment</h2>
+                  <p className='home-p-tag-black'>{this.state.post?.missionStatment}</p>
+              
+                  <Link to='/' className='home-links-btn-black'><button >Read More</button></Link>
+                </div>
+                <img className='moble-off mission-image' width='400px' src='images/test-bible.jpeg'></img>
               </div>
             </div>
           </div>
           <div id="group6" class="parallax__group">
-            
+
             <div class="parallax__layer parallax__layer--back">
               <div class="title">
 
@@ -180,40 +168,40 @@ adminCheck=()=>{
               </div>
             </div>
             <div class="parallax__layer parallax__layer--base">
-              <div id='make-col'style={{justifyContent:'space-evenly'}} class="title ">
+              <div id='make-col' style={{ justifyContent: 'space-evenly' }} class="title ">
                 <section>
-                    <h2  className='home-h2-tag-white'>Church Hours</h2>
-              </section>
-              <section id='screen-90' className='moble-to-col'>
-                <section  id='screen-100' className=''>
+                  <h2 className='home-h2-tag-white'>Church Hours</h2>
+                </section>
+                <section id='screen-90' className='moble-to-col'>
+                  <section id='screen-100' className=''>
                     <h2 className='home-h2-tag-white'>WEDNESDAYS</h2>
                     <p className='home-p-tag-white'>
-                      5:45pm<br/> Dinner ($4.00)<br/>
-                     6:00pm<br/> Fellowship & Prayer<br/>
-                      7:00pm<br/> Bible Study
+                      5:45pm<br /> Dinner ($4.00)<br />
+                     6:00pm<br /> Fellowship & Prayer<br />
+                      7:00pm<br /> Bible Study
                     </p>
                   </section>
-                  <section id='screen-100'  className=''>
+                  <section id='screen-100' className=''>
                     <h2 className='home-h2-tag-white'>SATURDAYS</h2>
                     <p className='home-p-tag-white'>
-                    2:30pm<br/> Evangelism Training every second Saturday of each month followed by Community Outreach 3:30-5:30pm.
+                      2:30pm<br /> Evangelism Training every second Saturday of each month followed by Community Outreach 3:30-5:30pm.
                     </p>
                   </section>
-                  <section  id='screen-100' className=''>
+                  <section id='screen-100' className=''>
                     <h2 className='home-h2-tag-white'>SUNDAYS</h2>
                     <p className='home-p-tag-white'>
-                      10:00am<br/> Praise & Worship Service<br/>
-                      11:30am<br/> Adult Sunday School<br/>
-                      12:00pm<br/> Youth (15 yrs. - college) Sunday School
+                      10:00am<br /> Praise & Worship Service<br />
+                      11:30am<br /> Adult Sunday School<br />
+                      12:00pm<br /> Youth (15 yrs. - college) Sunday School
                       </p>
                   </section>
-              </section>
+                </section>
 
               </div>
             </div>
           </div>
           <div id="group7" class="parallax__group">
-           
+
             <div class="parallax__layer parallax__layer--base">
               <div class="title">
                 <MDBContainer>

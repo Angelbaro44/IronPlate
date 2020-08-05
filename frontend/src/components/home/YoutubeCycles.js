@@ -63,7 +63,6 @@ class YoutubeCycles extends Component {
 
       render() {
 
-            console.log(this);
             return (
                   <div style={{textAlign:'-webkit-center', width:'100%', height:'100%'}}>
                   <br/><br/>
