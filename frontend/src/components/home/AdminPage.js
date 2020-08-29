@@ -80,6 +80,12 @@ class AdminPage extends Component {
                               <div>
                                   <p>Welcome text on the home page:<br/><input placeholder='welcome text' value={this.state.welcomeText} name="welcomeText" type="text" onChange={this.handleChange} /></p>
                                   <p>Mission statment text :<br/><input placeholder='mission statmen' value={this.state.missionStatment} name="missionStatment" type="text" onChange={this.handleChange} /></p>
+                                  <p>About Us text :<br/><input placeholder='mission statmen' value={} name="missionStatment" type="text" onChange={} /></p>
+                                  <p>WEDNESDAYS Time :<br/><input placeholder='mission statmen' value={} name="missionStatment" type="text" onChange={} /></p>
+                                  <p>SATURDAYS Time:<br/><input placeholder='mission statmen' value={} name="missionStatment" type="text" onChange={} /></p>
+                                  <p>SUNDAYS Time:<br/><input placeholder='mission statmen' value={} name="missionStatment" type="text" onChange={} /></p>
+
+
                               </div>
                               <input type="submit" value="Save"/>
                           </form>
