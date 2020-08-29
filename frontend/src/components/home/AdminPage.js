@@ -81,10 +81,14 @@ class AdminPage extends Component {
                                   <p>Emergancy Message: <input placeholder='mission statment' value={} name="missionStatment" type="text" onChange={} /></p>
                                   <p>Welcome text on the home page:<br/><input placeholder='welcome text' value={this.state.welcomeText} name="welcomeText" type="text" onChange={this.handleChange} /></p>
                                   <p>Mission statment text :<br/><input placeholder='mission statment' value={this.state.missionStatment} name="missionStatment" type="text" onChange={this.handleChange} /></p>
-                                  <p>About Us text :<br/><input placeholder='mission statment' value={} name="missionStatment" type="text" onChange={} /></p>
-                                  <p>WEDNESDAYS Time :<br/><input placeholder='mission statment' value={} name="missionStatment" type="text" onChange={} /></p>
-                                  <p>SATURDAYS Time:<br/><input placeholder='mission statment' value={} name="missionStatment" type="text" onChange={} /></p>
-                                  <p>SUNDAYS Time:<br/><input placeholder='mission statment' value={} name="missionStatment" type="text" onChange={} /></p>
+                                  <p>About Us text :<br/><input placeholder='About Us statment' value={} name="missionStatment" type="text" onChange={} /></p>
+                                  <p>WEDNESDAYS Time :<br/><input placeholder='WEDNESDAYS Time' value={} name="missionStatment" type="text" onChange={} /></p>
+                                  <p>WEDNESDAYS Event :<br/><input placeholder='WEDNESDAYS Event' value={} name="missionStatment" type="text" onChange={} /></p>
+                                  <p>SATURDAYS Time:<br/><input placeholder='SATURDAYS Time' value={} name="missionStatment" type="text" onChange={} /></p>
+                                  <p>SATURDAYS Event::<br/><input placeholder='SATURDAYS Event' value={} name="missionStatment" type="text" onChange={} /></p>
+                                  <p>SUNDAYS Time:<br/><input placeholder='SUNDAYS Time' value={} name="missionStatment" type="text" onChange={} /></p>
+                                  <p>SUNDAYS Event:<br/><input placeholder='SUNDAYS Event' value={} name="missionStatment" type="text" onChange={} /></p>
+
 
 
                               </div>
