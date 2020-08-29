@@ -88,9 +88,6 @@ class AdminPage extends Component {
                                   <p>SATURDAYS Event::<br/><input placeholder='SATURDAYS Event' name="missionStatment" type="text"/></p>
                                   <p>SUNDAYS Time:<br/><input placeholder='SUNDAYS Time' name="missionStatment" type="text"/></p>
                                   <p>SUNDAYS Event:<br/><input placeholder='SUNDAYS Event' name="missionStatment" type="text"/></p>
-
-
-
                               </div>
                               <input type="submit" value="Save"/>
                           </form>
