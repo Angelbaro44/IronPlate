@@ -87,16 +87,6 @@ class App extends Component {
             </MDBNavbar>
           </MDBContainer>
         </nav>
-
-
-
-
-
-
-
-
-
-
         <Switch>
           <Route exact path="/" render={(props) => <Home {...props} />} />
           <Route exact path="/sign-up" render={(props) => <SignUp {...props} setUser={this.setUser} />} />

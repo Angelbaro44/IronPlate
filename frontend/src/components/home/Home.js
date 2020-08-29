@@ -37,12 +37,9 @@ class Home extends Component {
           <label><input type="checkbox" /> Debug</label>
         </div>
         <div class="demo__info">
-
         </div>
-
         <div class="parallax">
           <div id="group1" class="parallax__group">
-
             <div class="parallax__layer parallax__layer--fore">
               <div class="title">
 
@@ -56,14 +53,8 @@ class Home extends Component {
                   <br />
                   <Link to='/' className='home-links-btn-white'><button >Pastor's Message</button></Link>
                 </div>
-
-
               </div>
-
-
-
             </div>
-
             <div class="parallax__layer parallax__layer--base">
               <div class="title">
                 <video autoPlay loop muted preload src="images/test-church-video.mp4" type="video/mp4" />
@@ -281,18 +272,6 @@ class Home extends Component {
             </div>
           </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
       </React.Fragment>
     );
   }
