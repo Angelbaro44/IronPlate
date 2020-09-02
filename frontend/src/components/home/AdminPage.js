@@ -26,7 +26,7 @@ class AdminPage extends Component {
                   this.setState({
                       quote_title:'',
                       quote_body:'',
-                      quote_source:'',
+                      quote_source:'', 
                       quote_by:'',
                       loading:false
                   })
